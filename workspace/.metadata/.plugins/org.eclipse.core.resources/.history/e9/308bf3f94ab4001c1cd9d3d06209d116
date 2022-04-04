@@ -14,6 +14,9 @@ public class Ingredient {
 	private double quantity;
 	@OneToMany(mappedBy ="ingredient")
 	private List<MealIngredient> mealIngredients;
+	@ManyToOne
+	@JoinColumn(name ="meal_id", nullable = false)
+	private Meal meal;
 	
 	public int getId() {
 		return id;
@@ -39,5 +42,12 @@ public class Ingredient {
 	public void setMealIngredients(List<MealIngredient> mealIngredients) {
 		this.mealIngredients = mealIngredients;
 	}
+	public Meal getMeal() {
+		return meal;
+	}
+	public void setMeal(Meal meal) {
+		this.meal = meal;
+	}
+	
 	
 }
