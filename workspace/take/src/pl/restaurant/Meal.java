@@ -13,13 +13,8 @@ public class Meal {
 	private String name;
 	private double price;
 	private boolean availability;
-	@ManyToMany
-	@JoinTable(
-	        name = "Meal_Ingredient", 
-	        joinColumns = { @JoinColumn(name = "meal_id") }, 
-	        inverseJoinColumns = { @JoinColumn(name = "ingredient_id") }
-	    )
-	private List<Ingredient> ingredients;
+	@OneToMany(mappedBy ="meal")
+	private List<MealIngredient> mealIngredients;
 	@ManyToMany(mappedBy = "meals")
 	private List<Order> orders;
 	
@@ -53,17 +48,17 @@ public class Meal {
 	public void setAvailability(boolean availability) {
 		this.availability = availability;
 	}
-	public List<Ingredient> getIngredients() {
-		return ingredients;
-	}
-	public void setIngredients(List<Ingredient> ingredients) {
-		this.ingredients = ingredients;
-	}
 	public List<Order> getOrders() {
 		return orders;
 	}
 	public void setOrders(List<Order> orders) {
 		this.orders = orders;
+	}
+	public List<MealIngredient> getMealIngredients() {
+		return mealIngredients;
+	}
+	public void setMealIngredients(List<MealIngredient> mealIngredients) {
+		this.mealIngredients = mealIngredients;
 	}
 	
 }
