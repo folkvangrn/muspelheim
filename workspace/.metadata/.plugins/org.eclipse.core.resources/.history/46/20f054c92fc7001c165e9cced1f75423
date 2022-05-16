@@ -1,0 +1,32 @@
+package pl.restaurant.rest;
+
+import pl.restaurant.Client;
+import pl.restaurant.ClientManager;
+
+public class ClientRest implements ClientManager {
+
+	@Override
+	public void create(Client client) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Client findById(int idc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void updateClient(Client client) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int idc) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

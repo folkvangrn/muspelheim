@@ -1,0 +1,30 @@
+package pl.restaurant.ejb;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.sun.security.ntlm.Client;
+
+@Stateless
+public class ClientEjb {
+
+	@PersistenceContext(name="clientManager")
+	EntityManager manager;
+	
+	
+	public void create(Client client){
+		manager.persist(client);
+	}
+	
+	public void delete(int idc){
+		Client client = manager.find(Client.class, idc);
+		manager.remove(client);
+	}
+	
+	public Client find(int idc){
+		return manager.find(Client.class, idc);
+	}
+	
+	
+}

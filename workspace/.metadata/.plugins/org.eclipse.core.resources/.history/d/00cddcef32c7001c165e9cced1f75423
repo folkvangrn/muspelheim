@@ -1,0 +1,20 @@
+package pl.restaurant;
+
+import java.util.List;
+
+import javax.ejb.Local;
+
+@Local
+public interface CreatingOrders {
+
+	public abstract void create (Order order);
+	
+	public abstract Order findById(int id);
+	
+	public abstract void updateOrder(Order order);
+	
+	public abstract void delete(int id);
+	
+	public abstract List<Order>findOrdersByCustomerId(int idc);
+	
+}

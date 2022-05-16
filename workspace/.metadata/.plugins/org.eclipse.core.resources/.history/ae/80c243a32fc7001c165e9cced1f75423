@@ -1,0 +1,5 @@
+package pl.restaurant.ejb;
+
+public class ClientEjb {
+
+}

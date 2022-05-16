@@ -1,0 +1,59 @@
+package pl.restaurant.rest;
+
+import java.util.List;
+
+import javax.ejb.EJB;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+import pl.restaurant.CreatingOrder;
+import pl.restaurant.Order;
+import pl.restaurant.ejb.CreatingOrderEjb;
+
+@Consumes({ "application/json" })
+@Produces({ "application/json" })
+public class CreatingOrderRest implements CreatingOrder {
+
+	@EJB
+	CreatingOrderEjb bean;
+	
+	@Override
+	@POST
+	@Path("/orders")
+	public void create(Order order) {
+		bean.create(order);
+	}
+
+	@Override
+	@GET
+	@Path("/orders/{id}")
+	public Order findById(@PathParam("idc") int id) {
+		Order order = bean.findById(id);
+		return order;
+	}
+
+	@Override
+	public void update(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Order> findOrdersByCustomerId(int idc) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}
