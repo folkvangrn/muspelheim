@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jaxrs-api-2.1.0.GA.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jaxrs-api-2.1.0.GA.jar!/"/>
+	</lib>
+	<lib name="jboss-annotations-api_1.1_spec-1.0.0.Final.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jboss-annotations-api_1.1_spec-1.0.0.Final.jar!/"/>
+	</lib>
+	<lib name="jboss-ejb-api_3.1_spec-1.0.1.Final.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jboss-ejb-api_3.1_spec-1.0.1.Final.jar!/"/>
+	</lib>
+	<lib name="hibernate-jpa-2.0-api-1.0.1.Final.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar!/"/>
+	</lib>
+	<levels>
+		<level name="Java EE 6-Java EE 6" value="project"/>
+	</levels>
+</component>

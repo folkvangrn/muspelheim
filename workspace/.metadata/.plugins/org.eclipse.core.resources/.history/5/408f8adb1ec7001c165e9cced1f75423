@@ -1,5 +1,0 @@
-package pl.restaurant.repositories;
-
-public class ClientRepository {
-
-}
